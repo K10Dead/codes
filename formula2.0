@@ -19,9 +19,9 @@ int main()
   }
   
   cout<< "Многоугольник:"<<'\n';
-  for (int i = 0; i < 6; i++)
+  for (int i = 0; i < STOLB; i++)
     {
-        for (int j = 0; j < 6; j++)
+        for (int j = 0; j < STROK; j++)
             if (a[i][j] == 1)
             {
                 
