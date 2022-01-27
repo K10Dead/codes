@@ -1,0 +1,38 @@
+#include <iostream>
+#include <ctime>
+using namespace std;
+
+int main()
+{
+   setlocale(LC_ALL, "ru");
+ const int STOLB=6;
+ const int STROK=6;
+ int a[STOLB][STROK];
+  for (int i=0; i<STOLB; i++) 
+  {
+      for (int j=0; j< STROK; j++)
+      {
+          cout<<"a["<<i+1<<"]["<<j+1<<"]: ";
+          cin>>a[i][j];
+          
+      }
+  }
+  for (int i = 0; i < 6; i++)
+    {
+        for (int j = 0; j < 6; j++)
+            if (a[i][j] == 1)
+            {
+                
+                cout << static_cast<char>(176);
+                cout << static_cast<char>(176);
+            } else
+                 cout << "  ";  
+        cout << endl;
+ }
+ int g,v;
+ cout<<"Введите кол-во точек на границе многоугольника (1): ";
+ cin>> g;
+ cout<< "Введите кол-во точек внутри многоугольника (0): ";
+ cin>> v;
+ cout<< "S="<<v+(g/2)-1;
+}
