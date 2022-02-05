@@ -1,0 +1,105 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+float a, b, c;
+char d;
+int p;
+int main()
+{
+    setlocale(LC_ALL, "ru");
+    while (p != 5)
+    {
+        cout << "1 - калькулятор \n2 - расчёт массы\n3 - возведение в степень \n4 - корень\n5 - выход \n";
+        cin >> p;
+        switch (p)
+        {
+            if (p == 1) 
+            {
+        case 1:
+        {
+            cout << "первое число >> ";
+            cin >> a;
+            cout << "действие с числами >> ";
+            cin >> d;
+            cout << "второе число >> ";
+            cin >> b;
+            if (d == '+')
+            {
+                c = a + b;
+                cout << a << " + " << b << " = " << c << endl;
+            }
+            if (d == '-')
+            {
+                c = a - b;
+                cout << a << " - " << b << " = " << c << endl;
+            }
+            if (d == '*')
+            {
+                c = a * b;
+                cout << a << " * " << b << " = " << c << endl;
+            }
+            if (d == '/')
+            {
+                c = a / b;
+                cout << a << " / " << b << " = " << c << endl;
+                try
+                {
+                    if (b == 0)
+                        throw 123;
+                }
+                catch (int q)
+                {
+                    cout << " Error number " << q << " >> divide by 0!" << endl;
+                }
+            }       cout << "Результат = " << c << '\n';
+
+
+        }
+            }
+        if (p==2){
+        case 2:
+        {
+            cout << " 1-кг\n 2-граммы\n 3-тонны\n";
+            cin >> p;
+            cout << " введите число (в кг):";
+            cin >> a;
+            if (p == 1)
+                cout << "Результат:" << a * 1 << '\n';
+            if (p == 2)
+                cout << "Результат:" << a * 1000 << '\n';
+            if (p == 3)
+                cout << "Результат:" << a / 1000 << '\n';
+
+        }
+        }
+        if (p==3){
+        case 3:
+        {
+
+            double a, b;
+            cout << "Число:";
+            cin >> a;
+            cout << "Степень:";
+            cin >> b;
+            cout << "Результат = " << pow(a, b) << '\n';
+            cin.get();
+
+        }}
+        if (p==4){
+        case 4:
+        {
+            double a, b;
+            cout << "Введите число:";
+            cin >> a;
+            cout << "Результат:" << sqrt(a) << '\n';
+        }
+        }
+        case 5:
+        {
+            break;
+        }
+        }
+    }
+}
