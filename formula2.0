@@ -7,18 +7,26 @@ int main()
     setlocale(LC_ALL, "ru");
     const int STOLB = 6;
     const int STROK = 6;
-    int a[STOLB][STROK];
+    int a[STOLB][STROK];int s; s = 0;
     cout<< "Для обозначения точки-1/пустоты-0"<< '\n';
     for (int i = 0; i < STOLB; i++)
     {
         for (int j = 0; j < STROK; j++)
         {
-            cout << "a[" << i + 1 << "][" << j + 1 << "]: ";
+            
             cin >> a[i][j];
 
         }
     }
-
+    for(int i = 0; i < STOLB; ++i)
+    {
+  for(int j = 0; j < STOLB; ++j)
+  
+    s += a[i][j];
+  //cout << s << '\n';
+        
+    }
+    cout << "точек на многоугольнике: "<< s << '\n';
     cout << "Многоугольник:" << '\n';
     for (int i = 0; i < STOLB; i++)
     {
@@ -33,20 +41,9 @@ int main()
                 cout << "  ";
         cout << endl; 
     }
-
-    cout << "(для удобства счёта точек)" << '\n';
-    for (int i = 0; i < STOLB; i++)
-    {
-        for (int j = 0; j < STROK; j++)
-        {
-            cout << a[i][j] << "  ";
-        }cout << endl;
-    }
     cout << "Нахождение площади"<< endl;
-    int g, v;
-    cout << "Введите кол-во точек на границе многоугольника (1): ";
-    cin >> g;
+    int  v;
     cout << "Введите кол-во точек внутри многоугольника (0): ";
     cin >> v;
-    cout << "S=" << v + (g / 2) - 1;
+    cout << "S=" << v + (s / 2) - 1;
 }
